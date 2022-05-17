@@ -30,14 +30,14 @@ def main():
 
     apple_list = []
     for i in range(3):
-        yoko = randint(0, screen_yokohaba)
-        tate = 0
+        yoko = randint(0, screen_yokohaba) - fruit_size[0]/2
+        tate = -fruit_size[1]/2
         speed = randint(2, 4)
         apple_list.append([yoko, tate, speed])
     banana_list = []
     for i in range(3):
-        yoko = randint(0, screen_yokohaba)
-        tate = 0
+        yoko = randint(0, screen_yokohaba) - fruit_size[0]/2
+        tate = -fruit_size[1]/2
         speed = randint(2, 4)
         banana_list.append([yoko, tate, speed])
 
@@ -58,7 +58,7 @@ def main():
 
         for apple in apple_list:
             apple[1] += apple[2]
-            screen.blit(apple_image, (apple[0]-fruit_size[0]/2, apple[1]-fruit_size[1]/2))
+            screen.blit(apple_image, (apple[0], apple[1]))
             for tyouten in tyouten_list:
                 tyouten_yoko = apple[0] + tyouten[0]
                 tyouten_tate = apple[1] + tyouten[1]
@@ -70,8 +70,8 @@ def main():
                     pygame.mixer.music.play(1)
                 elif apple[1] >= screen_tatehaba:
                     drop_count += 1
-                    apple[0] = randint(0, screen_yokohaba)
-                    apple[1] = 0
+                    apple[0] = randint(0, screen_yokohaba) - fruit_size[0]/2
+                    apple[1] = - fruit_size[1]/2
                     pygame.mixer.music.load("./audio/drop.ogg")
                     pygame.mixer.music.play(1)
 
@@ -89,8 +89,8 @@ def main():
                     pygame.mixer.music.play(1)
                 elif banana[1] >= screen_tatehaba:
                     drop_count += 1
-                    banana[0] = randint(0, screen_yokohaba)
-                    banana[1] = 0
+                    banana[0] = randint(0, screen_yokohaba) - fruit_size[0]/2
+                    banana[1] = -fruit_size[1]/2
                     pygame.mixer.music.load("./audio/drop.ogg")
                     pygame.mixer.music.play(1)
 
