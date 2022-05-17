@@ -64,8 +64,8 @@ def main():
                 tyouten_tate = apple[1] + tyouten[1]
                 if box_basyo[0] <= tyouten_yoko <= box_basyo[0]+box_size[0] and box_basyo[1] <= tyouten_tate <= box_basyo[1]+box_size[1]:
                     apple_score += 1
-                    apple[0] = randint(0, screen_yokohaba)
-                    apple[1] = 0
+                    apple[0] = randint(0, screen_yokohaba) - fruit_size[0]/2
+                    apple[1] = - fruit_size[1]/2
                     pygame.mixer.music.load("./audio/catch.ogg")
                     pygame.mixer.music.play(1)
                 elif apple[1] >= screen_tatehaba:
@@ -83,8 +83,8 @@ def main():
                 tyouten_tate = banana[1] + tyouten[1]
                 if box_basyo[0] <= tyouten_yoko <= box_basyo[0]+box_size[0] and box_basyo[1] <= tyouten_tate <= box_basyo[1]+box_size[1]:
                     banana_score += 1
-                    banana[0] = randint(0, screen_yokohaba)
-                    banana[1] = 0
+                    banana[0] = randint(0, screen_yokohaba) - fruit_size[0]/2
+                    banana[1] = -fruit_size[1]/2
                     pygame.mixer.music.load("./audio/catch.ogg")
                     pygame.mixer.music.play(1)
                 elif banana[1] >= screen_tatehaba:
