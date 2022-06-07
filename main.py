@@ -64,14 +64,14 @@ while True:
                 apple_score += 1
                 apple[0] = randint(0, screen_yokohaba) - fruit_size[0]/2
                 apple[1] = - fruit_size[1]/2
-                pygame.mixer.music.load("./audio/audio_catch.ogg")
+                pygame.mixer.music.load("./audio/catch.ogg")
                 pygame.mixer.music.play(1)
                 break
             elif apple[1] >= screen_tatehaba:
                 drop_count += 1
                 apple[0] = randint(0, screen_yokohaba) - fruit_size[0]/2
                 apple[1] = - fruit_size[1]/2
-                pygame.mixer.music.load("./audio/audio_drop.ogg")
+                pygame.mixer.music.load("./audio/drop.ogg")
                 pygame.mixer.music.play(1)
                 break
 
@@ -86,14 +86,14 @@ while True:
                 banana_score += 1
                 banana[0] = randint(0, screen_yokohaba) - fruit_size[0]/2
                 banana[1] = -fruit_size[1]/2
-                pygame.mixer.music.load("./audio/audio_catch.ogg")
+                pygame.mixer.music.load("./audio/catch.ogg")
                 pygame.mixer.music.play(1)
                 break
             elif banana[1] >= screen_tatehaba:
                 drop_count += 1
                 banana[0] = randint(0, screen_yokohaba) - fruit_size[0]/2
                 banana[1] = -fruit_size[1]/2
-                pygame.mixer.music.load("./audio/audio_drop.ogg")
+                pygame.mixer.music.load("./audio/drop.ogg")
                 pygame.mixer.music.play(1)
                 break
 
