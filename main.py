@@ -17,8 +17,8 @@ box_image = pygame.image.load("./images/box.png").convert_alpha()
 screen_yokohaba = pygame.display.get_surface().get_size()[0]
 screen_tatehaba = pygame.display.get_surface().get_size()[1]
 
-fruit_size = apple_image.get_rect()
-box_size = box_image.get_rect()
+fruit_size = apple_image.get_size()
+box_size = box_image.get_size()
 
 box_basyo = [screen_yokohaba/2 - box_size[0]/2, screen_tatehaba/2 - box_size[1]/2]
 
